@@ -1,0 +1,11 @@
+
+
+class BlockData {
+  constructor() {
+
+  }
+
+  serialize() {
+
+  }
+}
