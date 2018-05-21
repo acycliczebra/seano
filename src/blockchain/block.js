@@ -6,12 +6,10 @@
 class Block {
   constructor(
       hashFunction,
-      verifyDifficulty,
-      verifyCurrentBlockDataFromPrevious){
+      verifyDifficulty){
 
     this.hashFunction = hashFunction
     this.verifyDifficulty = verifyDifficulty
-    this.verifyCurrentBlockDataFromPrevious = verifyCurrentBlockDataFromPrevious
 
     this.blockData = null //type: BlockData
     this.previousBlock = null //type: Block
@@ -37,6 +35,14 @@ class Block {
     this.isVerified = false
   }
 
+  verifyHashDifficulty(hash) {
+    if (hash >= this.verifyDifficult) {
+      return true
+    }
+
+    return false
+  }
+
   verifyHash(nonce, hash) {
     if (this.isDataValid === false) {
       return false
@@ -53,7 +59,7 @@ class Block {
       return false
     }
 
-    if (this.verifyDifficulty(hash, this.blockData) === false) {
+    if (this.verifyDifficulty() === false) {
       return false
     }
 

@@ -22,21 +22,19 @@ class BlockChain {
     let genesisBlock = createGenesisBlock()
   }
 
-  isEmpty() {
-    if(this.head === null) {
-      return true
-    } else {
-      return false
-    }
-  }
-
-
-
-  getMostLikelyBlock() {
+  restoreBlockChain(rawData) {
 
   }
 
   mineNewBlock() {
+
+  }
+
+  importChainSegment(rawData) {
+
+  }
+
+  exportChainSegment(rawData) {
 
   }
 

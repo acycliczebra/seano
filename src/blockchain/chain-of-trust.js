@@ -8,6 +8,10 @@ class ChainOfTrust {
     this.head = null
   }
 
+  appendToChain(newBlock) {
+
+  }
+
   hashFunction() {
 
   }
